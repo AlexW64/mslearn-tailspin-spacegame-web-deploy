@@ -82,8 +82,8 @@ stages:
             - download: current
               artifact: drop
             - task: AzureWebApp@1
-              displayName: 'Resource Manager - Tailspin - Space Game'
+              displayName: 'Azure App Service Deploy: website'
               inputs:
-                azureSubscription: '19f4f0fd-b25f-4970-92ff-f13dd979f2ef'
+                azureSubscription: 'Resource Manager - Tailspin - Space Game'
                 appName: '$(WebAppName)'
                 package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
